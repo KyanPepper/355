@@ -3,11 +3,10 @@ using namespace std;
 
 
 int sumofn(int n){
-    int sum = 0;
-    for (int i =1; i<=n; i++){
-       sum+=i;
+    if(n == 0){
+        return 0;
     }
-    return sum;
+    return n + sumofn(n-1);
 }
 int main(){
     int n = 4;
