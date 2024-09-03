@@ -1,14 +1,12 @@
-module SumOfNTest
-where
-import Test.HUnit
+module SumOfNTest where
+
 import SumOfN
+import Test.HUnit
 
-addTest = TestCase $ assertEqual "for (add 1 2)," 3 (add 1 2)
+addTest = TestCase (assertEqual "add testing" 2 (add 1 1))
 
-SumOfNTest1 = TestCase $ assertEqual "for (sumOfN 0)," 0 (sumOfN 0)
+sumOfNTest1 = TestCase (assertEqual "sumofNTesting" 10 (sumOfN 4))
 
-SumOfNTest2 = TestCase $ assertEqual "for (sumOfN 1)," 10 (sumOfN 4)
-
-tests = TestList [addTest,sumOfNTest1,sumOfNTest2]
+tests = TestList [addTest, sumOfNTest1]
 
 run = runTestTT tests

@@ -1,12 +1,13 @@
-module SumOfN
-where
+module SumOfN where
 
-    add x y = x + y
+add x y = x + y
 
-    sumOfN 0 = 0
-    sumOfN n = n + sumOfN (n - 1)
+sumOfN :: (Eq t, Num t) => t -> t
+sumOfN 0 = 0
+sumOfN n = n + sumOfN (n - 1)
+
+main = do
+    let res = add 1 2
+    putStrLn ("sum = " ++ show res)
     
 
-    main = do
-        let res = add 1 2
-        
